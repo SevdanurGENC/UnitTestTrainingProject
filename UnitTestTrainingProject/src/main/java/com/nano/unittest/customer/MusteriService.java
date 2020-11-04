@@ -10,6 +10,10 @@ public class MusteriService {
 		bilgilendirmeService.yeniKayitMailGonder(musteri);
 	}
 	
+	public void musteriSil(Integer musteriID) {
+		musteriRepository.sil(musteriID); 
+	}
+	
 	public void setMusteriRepository(MusteriRepository musteriRepository) {
 		this.musteriRepository = musteriRepository;
 	}

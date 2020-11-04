@@ -6,4 +6,13 @@ public class MusteriRepository {
 		System.out.println("Kaydedildi.");
 	}
 
+	public void sil(Integer musteriID) {
+		System.out.println("Musteri Silindi.");
+	}
+
+	public Musteri bul(Integer musteriID) {
+		System.out.println("Musteri Bulundu.");
+		return null;
+	}
+	
 }
