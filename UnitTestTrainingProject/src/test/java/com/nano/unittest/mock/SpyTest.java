@@ -13,7 +13,8 @@ public class SpyTest {
       DummyCustomerService service=spy(new DummyCustomerServiceImpl());
 
       doNothing().when(service).addCustomer("istanbul");
-      //doThrow(new IllegalArgumentException()).when(service).removeCustomer(anyString()); // ne yazarsan yaz hatayı atıcak
+      //doThrow(new IllegalArgumentException()).when(service).removeCustomer(anyString()); 
+      //ne yazarsan yaz hatayı atıcak
 
 //      service.addCustomer("istanbul");
 //      service.addCustomer("ankara"); // ankara için bir mock yazılmadığı için gerçek nesneyi çağırır.
@@ -21,7 +22,8 @@ public class SpyTest {
 
       doNothing().when(service).removeCustomer("İstanbul1");
       doNothing().when(service).removeCustomer("İstanbul2");
-     // doCallRealMethod().when(service).removeCustomer("İstanbul3"); bu olmasada spy olduğu için gerçek nesneyi çağıracak.
+      //doCallRealMethod().when(service).removeCustomer("İstanbul3"); 
+      //bu olmasada spy olduğu için gerçek nesneyi çağıracak.
 
       service.removeCustomer("İstanbul1");
       service.removeCustomer("İstanbul2");
